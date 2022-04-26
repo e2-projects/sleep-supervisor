@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sleep Supervisor</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link href="./styles.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="./app/styles/neumorphic.css" rel="stylesheet" crossorigin="anonymous">
+    <script defer src="./app/js/buttons.js"></script>
+</head>
+<body>
+    <div class="main">
+        <button id="minimizeButton" class="neu round-small minimize" onclick="minimizeApp()">-</button>
+        <button id="closeButton" class="neu round-small close" onclick="closeApp()">x</button>
+        <div class="container">
+            <div class="content">
+                <div id="timer" class="time">00:00:00</div>
+                <button id="toggleButton" class="neu toggle" onclick="toggleSupervisor()">Start</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "sleep-supervisor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e2-projects/sleep-supervisor.git"
+  },
+  "author": "Dum6o",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/e2-projects/sleep-supervisor/issues"
+  },
+  "homepage": "https://github.com/e2-projects/sleep-supervisor#readme",
+  "devDependencies": {
+    "electron": "^18.1.0"
+  }
+}

@@ -1,0 +1,244 @@
+@import url(colors.css);
+
+.neu-back {
+    background: #EBECF0;
+}
+
+.neu-shadow-out {
+    background: #EBECF0;
+    box-shadow: -2px -2px 2px #FFFFFF,
+                2px 2px 2px #BABECC;
+}
+
+.neu-shadow-in {
+    background: #EBECF0;
+    box-shadow: inset 2px 2px 2px #BABECC,
+                inset -2px -2px 2px #FFFFFF;
+}
+
+a.neu {
+    color: #AAAAAA;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+label.neu {
+    color: gray;
+}
+
+div.neu-info, span.neu-info, i.neu-info {
+    text-align: center;
+    color:#AAAAAA;
+    font-size: 12px;
+}
+
+div.neu-info {
+    padding-top: 20px;
+}
+
+input.neu,
+button.neu,
+select.neu,
+div.neu,
+textarea.neu {
+    border: 0;
+    outline: 0;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    background: #EBECF0;
+}
+
+input.neu,
+select.neu,
+button.neu {
+    font-size: 1rem;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+
+button.neu {
+    cursor: pointer;
+    color: #61677C;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: -2px -2px 2px #FFFFFF,
+                3px 3px 3px #BABECC;
+}
+
+button.neu:hover,
+button.neu.round-small:hover {
+    box-shadow: -1px -1px 2px #FFFFFF,
+                1px 1px 2px #BABECC;
+}
+
+button.neu:active,
+button.neu.round-small:active {
+    box-shadow: inset 1px 1px 2px #BABECC,
+                inset -1px -1px 2px #FFFFFF;
+}
+
+button.neu:disabled {
+    color: dimgray;
+    box-shadow: none;
+}
+
+button.neu.primary {
+    color: #0D6EFD;
+    text-shadow: none;
+}
+
+button.neu.primary:disabled {
+    color: dimgray;
+}
+
+button.neu.small {
+    font-size: .7rem;
+    padding: .5rem 1rem;
+    text-shadow: none;
+    min-width: 5rem;
+    margin: 0 .3rem;
+}
+
+button.neu.round {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    text-shadow: none;
+    font-weight: normal;
+    text-align: center;
+}
+
+button.neu.round-small {
+    padding: .5rem;
+    font-size: .7rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    vertical-align: middle;
+    box-shadow: -2px -2px 2px #FFFFFF,
+                3px 3px 3px #BABECC;
+}
+
+input.neu,
+select.neu,
+textarea.neu {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: inset 2px 2px 2px #BABECC,
+                inset -2px -2px 2px #FFFFFF;
+}
+
+input.neu:focus,
+select.neu:focus,
+textarea.neu:focus {
+    box-shadow: inset 1px 1px 2px #BABECC,
+                inset -1px -1px 2px #FFFFFF;
+}
+
+input.neu:read-only:focus,
+select.neu:read-only:focus,
+textarea.neu:read-only:focus {
+    box-shadow: inset 2px 2px 2px #BABECC,
+                inset -2px -2px 2px #FFFFFF;
+}
+
+input.neu.neu-error,
+select.neu.neu-error,
+textarea.neu.neu-error {
+    border: 2px solid rgb(179, 0, 0);
+}
+
+input.neu.medium,
+textarea.neu.medium {
+    font-size: .8rem;
+    padding: .7rem 1rem;
+}
+
+input.neu.small {
+    margin-bottom: 0;
+    font-size: small;
+    padding: .5rem 1rem;
+}
+
+div.neu.text-display {
+    width: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: inset 1px 1px 2px #BABECC,
+                inset -1px -1px 2px #FFFFFF;
+}
+
+.neu-icon-circle {
+    background: #EBECF0;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0;
+    box-shadow: inset 1px 1px 2px #BABECC,
+                inset -1px -1px 2px #FFFFFF;
+}
+
+label.neu {
+    display: inline-block;
+    cursor: pointer;
+    padding: .56rem 0;
+}
+
+div.neu-line {
+    width: 95%;
+    height: 10px;
+    margin: 2rem auto;
+    border-radius: 1.5rem;
+    box-shadow: inset 1px 1px 2px #BABECC,
+                inset -1px -1px 2px #FFFFFF;
+}
+
+input[type=checkbox].neu {
+    border-radius: 25%;
+    font-size: 1rem;
+    cursor: pointer;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0 .3rem;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2),
+                    -2px -2px 3px white,
+                    inset 1px 1px 2px rgba(0, 0, 0, 0.2),
+                    inset -1px -1px 2px white;
+    border: .15rem solid #f2f3f7;
+    vertical-align: middle;
+    
+    outline: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -webkit-touch-callout: none;
+    letter-spacing: 0;
+    overflow: inherit;
+
+    background-color: initial;
+}
+
+input[type=checkbox].neu:checked {
+    box-shadow: 0 0 0.5em rgba(54, 123, 240, 0.7),
+                inset 0 -0.1em 0 rgba(0, 0, 0, 0.2),
+                inset 0 0.1em 0.1em rgba(255, 255, 255, 0.2);
+    border-width: .1rem;
+    border-color: #0D6EFD;
+    background-color: #0D6EFD;
+}
