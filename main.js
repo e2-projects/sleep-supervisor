@@ -1,3 +1,4 @@
+
 const { app, BrowserWindow, ipcMain, powerSaveBlocker } = require('electron');
 const path = require('path');
 let id = 0;
@@ -13,11 +14,11 @@ function createWindow() {
         maximizable: false,
         transparent: true, 
         frame: false,
-        icon: path.join(__dirname, 'assets/app-icon.png'),
+        icon: path.join(__dirname, 'src/assets/app-icon.ico'),
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
-            preload: path.join(__dirname, 'preload.js'),
+            preload: path.join(__dirname, 'src/app/js/preload.js'),
         }
     });
 
@@ -48,10 +49,4 @@ function createWindow() {
 
 app.whenReady().then(() => {
     createWindow();
-
-    app.on('activate', () => {
-        if (BrowserWindow.getAllWindows().length === 0) {
-            createWindow();
-        }
-    });
 });

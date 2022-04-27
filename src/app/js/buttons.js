@@ -1,5 +1,4 @@
-const { ipcRenderer } = require('electron');
-const ipc = ipcRenderer;
+const ipc = require('electron').ipcRenderer;
 
 let isStarted = false;
 let timer;
@@ -26,7 +25,6 @@ function toggleSupervisor() {
         totalSeconds = 0;
         isStarted = false;
         clearInterval(timer);
-        console.log('stop');
         document.getElementById('timer').innerHTML = '00:00:00';
         button.innerHTML = 'Start';
     }
@@ -34,7 +32,6 @@ function toggleSupervisor() {
 }
 
 function countTime() {
-    console.log('started');
     ++totalSeconds;
     let hour = Math.floor(totalSeconds / 3600);
     let minute = Math.floor((totalSeconds - hour * 3600) / 60);
