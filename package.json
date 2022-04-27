@@ -1,23 +1,103 @@
 {
   "name": "sleep-supervisor",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/main.js",
+  "description": "Sleep supervisor which prevents Windows from sleeping",
+  "main": "./main.js",
   "scripts": {
     "start": "electron .",
-    "test": "test"
+    "test": "test",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/e2-projects/sleep-supervisor.git"
   },
-  "author": "Dum6o",
+  "author": "Edvardas Jusius",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/e2-projects/sleep-supervisor/issues"
   },
   "homepage": "https://github.com/e2-projects/sleep-supervisor#readme",
   "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
     "electron": "^18.1.0"
+  },
+  "build": {
+    "appId": "com.e2projects.app",
+    "productName": "Sleep Supervisor",
+    "win": {
+      "target": [
+        "zip"
+      ],
+      "icon": "./src/assets/app-icon.ico"
+    },
+    "portable": {
+      "artifactName": "Sleep_Supervisor.exe",
+      "splashImage": "./src/assets/app-icon.ico",
+      "useZip": true
+    },
+    "directories": {
+      "output": "out/output",
+      "app": "./",
+      "buildResources": "out/buildResources"
+    },
+    "installerIcon": "./src/assets/app-icon.ico",
+    "files": [
+      "!**/**/*",
+      "!**/*",
+      "!node_modules/**/*",
+      "!.vscode/*",
+      "src/**",
+      "index.html",
+      "main.js",
+      "package.json",
+      "styles.css"
+    ]
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "./src/assets/app-icon.ico",
+        "ignore": [
+          ".git",
+          ".gitignore",
+          "package-lock.json"
+        ],
+        "junk": true,
+        "overwrite": true,
+        "platform": "win32",
+        "arch": "ia32"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "sleep_supervisor"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
   }
 }
